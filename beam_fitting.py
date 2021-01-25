@@ -103,4 +103,5 @@ class GP_beam_fitter():
         print(f'Null transmission rms = {null_trans_rms:1.06f}')
 
         return beam_image, beam_unc
+
         
