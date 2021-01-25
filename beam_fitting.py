@@ -81,7 +81,8 @@ class GP_beam_fitter():
         x_train = self.XY[selected_index,:]
         I_train = I[selected_index]
         self.gp.fit(x_train,I_train)
-       
+        self.imgMax = imgMax
+        self.imgMin = imgMin
         # predict on reduced grid
         I_pred,I_pred_err = self.gp.predict(self.XY_pred,return_std=True)
         I_pred = I_pred.reshape(self.N_pred)
